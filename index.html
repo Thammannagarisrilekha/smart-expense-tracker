@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Trackify</title>
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet"
+    href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h2>Trackify</h2>
+
+            </div>
+
+            <ul class="menu">
+
+                <li class="active"
+                id="dashboard-btn">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </li>
+
+                <li id="expense-btn">
+
+                    <i class="fa-solid fa-money-bill"></i>
+
+                    Expenses
+
+                </li>
+
+                <li id="analytics-btn">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                    Analytics
+
+                </li>
+
+                <li id="theme-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="main-content">
+
+            <div class="top-bar">
+
+                <div>
+
+                    <h1>Smart Expense Tracker</h1>
+
+                    <p>
+                        Track and manage your expenses smartly
+                    </p>
+
+                </div>
+
+                <button class="profile-btn">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </button>
+
+            </div>
+
+            <div class="cards">
+
+                <div class="card balance-card">
+
+                    <h3>Total Balance</h3>
+
+                    <h1 id="balance">₹0</h1>
+
+                </div>
+
+                <div class="card income-card">
+
+                    <h3>Income</h3>
+
+                    <h1 id="income">₹0</h1>
+
+                </div>
+
+                <div class="card expense-card">
+
+                    <h3>Expense</h3>
+
+                    <h1 id="expense">₹0</h1>
+
+                </div>
+
+            </div>
+
+            <div class="form-section">
+
+                <h2>Add Transaction</h2>
+
+                <form id="expense-form">
+
+                    <input type="text"
+                    id="text"
+                    placeholder="Enter description">
+
+                    <input type="number"
+                    id="amount"
+                    placeholder="Enter amount">
+
+                    <select id="category">
+
+                        <option>Food</option>
+
+                        <option>Travel</option>
+
+                        <option>Shopping</option>
+
+                        <option>Bills</option>
+
+                        <option>Salary</option>
+
+                    </select>
+
+                    <select id="type">
+
+                        <option value="income">
+
+                            Income
+
+                        </option>
+
+                        <option value="expense">
+
+                            Expense
+
+                        </option>
+
+                    </select>
+
+                    <button type="submit">
+
+                        Add Transaction
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="expense-summary">
+
+                <h2>Expense Summary</h2>
+
+                <div class="summary-cards">
+
+                    <div class="summary-card">
+
+                        <h3>Total Transactions</h3>
+
+                        <p id="total-transactions">0</p>
+
+                    </div>
+
+                    <div class="summary-card">
+
+                        <h3>Highest Expense</h3>
+
+                        <p id="highest-expense">₹0</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="history-section">
+
+                <h2>Transactions</h2>
+
+                <ul id="transaction-list"></ul>
+
+            </div>
+
+            <div class="analytics-section">
+
+                <h2>Expense Analytics</h2>
+
+                <div class="chart-box">
+
+                    <canvas id="expenseChart"></canvas>
+
+                </div>
+
+            </div>
+
+            <div class="progress-section">
+
+                <h2>Expense Progress</h2>
+
+                <div class="progress-bar">
+
+                    <div class="progress"
+                    id="progress"></div>
+
+                </div>
+
+                <p id="progress-text">
+
+                    0% Used
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
