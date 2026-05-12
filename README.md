@@ -30,7 +30,3 @@ A modern and interactive Expense Tracker web application built using HTML, CSS, 
 - Database Integration
 - Dark/Light Theme
 - Export Reports
-
-## Author
-
-Your Name
